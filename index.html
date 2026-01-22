@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Tester CV</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= VARIABLES ================= */
+:root {
+  --bg: #0f1220;
+  --card: #171a2e;
+  --accent: #6cf2c2;
+  --text: #eaeaf0;
+  --muted: #9aa0c7;
+}
+
+.light {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --accent: #3bbf9b;
+  --text: #121212;
+  --muted: #555;
+}
+
+/* ================= BASE ================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: .3s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ================= TOGGLE ================= */
+.toggle {
+  position: fixed;
+  top: 12px;
+  right: 20px;
+  background: var(--card);
+  border-radius: 50px;
+  padding: 10px 14px;
+  cursor:pointer;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 20px;  
+  box-shadow: 0 20px 40px rgba(0,0,0,.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= HEADER ================= */
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.info p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+/* ================= TITLES ================= */
+h2 {
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.skill {
+  background: rgba(255,255,255,0.04);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.bar {
+  height: 8px;
+  background: rgba(255,255,255,.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 1.2s ease;
+}
+
+/* ================= TAGS ================= */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(108,242,194,.15);
+  color: var(--accent);
+  margin: 6px 6px 0 0;
+  font-size: .85rem;
+}
+
+/* ================= EXPERIENCE ================= */
+.experience h3 {
+  margin-bottom: 6px;
+}
+
+.experience span {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="toggle" onclick="toggleTheme()">🌗</div>
+
+    <div class="container">
+
+    <header>
+        <div class="card">
+        <h1>DUFFOUR OCEANE</h1>
+        <div class="subtitle">Game Tester / QA – Mobile Games</div>
+        <div class="info">
+            <p>📍 Remote / Braga district </p>
+            <p>📧 oceane.duff.develo@gmail.com</p>
+            <p>🎮 Android · iOS · PC · PlayStation · Nintendo</p>
+            <p>🌍 French Native · English B2 · Portugues A2</p>
+        </div>
+        </div>
+
+        <div class="card">
+        <h2>Profile</h2>
+        <p>
+            Detail-oriented and IT-trained professional with a strong passion for mobile puzzle games.
+            Dedicated player of level-based, match-style games with a solid understanding of gameplay mechanics,
+            difficulty balance, and player experience.
+        </p>
+        </div>
+    </header>
+
+    <section class="card">
+    <h2>Core Skills</h2>
+    <div class="skills">
+        <div class="skill">QA & Testing Mindset<div class="bar"><div class="fill" data-width="80%"></div></div></div>
+        <div class="skill">Attention to Detail<div class="bar"><div class="fill" data-width="90%"></div></div></div>
+        <div class="skill">Puzzle Game Expertise<div class="bar"><div class="fill" data-width="85%"></div></div></div>
+        <div class="skill">Microsoft Office<div class="bar"><div class="fill" data-width="87%"></div></div></div>
+        <div class="skill">Android & iOS<div class="bar"><div class="fill" data-width="90%"></div></div></div>
+        <div class="skill">Analytical Thinking<div class="bar"><div class="fill" data-width="92%"></div></div></div>
+    </div>
+    </section>
+
+    <section class="card">
+    <h2>Gaming Profile</h2>
+    <p>Dedicated player of level-based, match-style puzzle games (3-match mechanics).</p>
+    <div>
+        <span class="tag">3-Match</span>
+        <span class="tag">Level Progression</span>
+        <span class="tag">Game Balance</span>
+        <span class="tag">Player Experience</span>
+    </div>
+    </section>
+
+    <section class="card">
+    <h2>Experience</h2>
+    <div class="experience">
+    <h3>Customer Advisor – PlayStation Support</h3>
+    <span>Remote · 2 years</span>
+    <ul>
+    <li>Analyzed player issues across gaming platforms</li>
+    <li>Followed structured QA-like processes</li>
+    <li>Clear documentation & reporting</li>
+    </ul>
+    </div>
+    </section>
+
+    <section class="card">
+    <h2>Education & Languages</h2>
+    <p><strong>Education:</strong> Secondary education + IT professional training</p>
+    <p><strong>Languages:</strong> French (Native), English (B2), Portuguese (A2)</p>
+    </section>
+
+<footer>
+Interactive Game Tester CV · HTML / CSS / JS
+</footer>
+
+</div>
+
+<script>
+/* Dark / Light */
+function toggleTheme() {
+document.body.classList.toggle('light');
+}
+
+/* Scroll Reveal */
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if(entry.isIntersecting){
+    entry.target.classList.add('show');
+    entry.target.querySelectorAll('.fill').forEach(bar => {
+    bar.style.width = bar.dataset.width;
+    });
+}
+});
+},{ threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
